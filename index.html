@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Keying Guo's personal site and selected coursework.">
+  <title>Keying Guo | Personal Website</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #fbfaf7;
+      --ink: #202927;
+      --accent: #285a4f;
+      --muted: #475b56;
+      --line: #bdcdc6;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 1rem/1.65 system-ui, sans-serif;
+    }
+
+    .wrap { width: min(100% - 3rem, 62rem); margin-inline: auto; }
+
+    header .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: .5rem 1.5rem;
+      padding-block: 1.25rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    header a { font-weight: 650; }
+    nav { display: flex; gap: 1.25rem; }
+    a { color: var(--accent); text-underline-offset: .23em; }
+    a:hover { text-decoration-thickness: .14em; }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
+    .intro { padding-block: clamp(3rem, 9vw, 7rem) clamp(2rem, 6vw, 4rem); }
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1, h2 {
+      font-family: Georgia, serif;
+      font-weight: 400;
+      line-height: 1.08;
+    }
+
+    h1 {
+      margin-bottom: 1rem;
+      font-size: clamp(3.5rem, 11vw, 7.5rem);
+      letter-spacing: -.055em;
+    }
+
+    h2 { margin-bottom: 1rem; font-size: clamp(2rem, 5vw, 3.15rem); }
+    h3 { margin-bottom: .35rem; font-size: 1.2rem; }
+    p { max-width: 58ch; margin-bottom: 0; }
+    .intro p { color: var(--muted); font-size: clamp(1.05rem, 3vw, 1.35rem); }
+    .section { border-top: 1px solid var(--line); padding-block: 2.25rem 2.75rem; }
+
+    .project {
+      background: #eaf1ec;
+      border: 1px solid var(--line);
+      border-radius: .85rem;
+      padding: clamp(1.15rem, 4vw, 2rem);
+      max-width: 42rem;
+    }
+
+    footer { color: var(--muted); border-top: 1px solid var(--line); padding-block: 1rem 1.75rem; }
+    @media (max-width: 34rem) { .wrap { width: calc(100% - 2rem); } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <a href="#home">Keying Guo</a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap" id="home">
+    <section class="intro" aria-labelledby="page-title">
+      <h1 id="page-title">Keying Guo</h1>
+      <p>I am a university student working on coursework in networking, machine learning and web development.</p>
+    </section>
+    <section class="section" id="about">
+      <h2>About me</h2>
+      <p>My coursework has included video streaming with Python sockets and network traffic analysis with Wireshark.</p>
+    </section>
+    <section class="section" id="projects">
+      <h2>Selected project</h2>
+      <article class="project">
+        <h3>StudyHub</h3>
+        <p>I worked on StudyHub, a student project that brings daily coursework and course resources together. Its Today’s Learning view gives students a place to find their courses for the day.</p>
+      </article>
+    </section>
+  </main>
+  <footer class="wrap">Keying Guo</footer>
+</body>
+</html>
